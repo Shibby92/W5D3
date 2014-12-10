@@ -2,7 +2,19 @@ public class Datum {
 
 	private int dan;
 	private int mjesec;
-	private int godina;
+	private  int godina;
+	/**
+	 * Generise 50 nasumicnih datuma iz 2014. godine
+	 */
+	public Datum (){
+		this.mjesec=(int)(1+Math.random()*(12-1));
+		if (this.mjesec==1 || this.mjesec==3 ||this.mjesec==5 || this.mjesec==7 ||this.mjesec==8 ||this.mjesec==10 || this.mjesec==12 )
+		this.dan=(int)(1+Math.random()*(31-1));
+		else if(this.mjesec==2)
+			this.dan=(int)(1+Math.random()*(28-1));
+		else
+			this.dan=(int)(1+Math.random()*(30-1));
+	}
 
 	/**
 	 * Prima tip Datum kao parametar i i postavlja ih respektivno
@@ -14,15 +26,6 @@ public class Datum {
 		this.dan = other.dan;
 		this.mjesec = other.mjesec;
 		this.godina = other.godina;
-	}
-
-	/**
-	 * postavlja parametre na: dan=1, mjesec=1,godina=1990
-	 */
-	public Datum() {
-		this.dan = 1;
-		this.mjesec = 1;
-		this.godina = 1900;
 	}
 
 	/**
