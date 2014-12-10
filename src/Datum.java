@@ -138,7 +138,7 @@ public class Datum {
 /**
  * Poredi koji je datum veci od drugog
  * @param other Datum koji se poredi
- * @return -1 ako je datum manje, 0 ako su isti, 1 ako je datum veci
+ * @return -1 ako je datum manji, 0 ako su isti, 1 ako je datum veci
  */
 	public int compare(Datum other) {
 		if (this.godina < other.godina)
